@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Web API Interaction</title>
+    <!-- Link to the external JavaScript file -->
+    <script src="/webapiJavascript/WebApi.js" defer></script>
+</head>
+<body>
+
+    <!-- Display lists of fetched data -->
+    <h2>Fetched Data</h2>
+    <div>
+        <h3>Courses</h3>
+        <ul id="courseList"></ul>
+
+        <h3>Students</h3>
+        <ul id="studentList"></ul>
+
+        <h3>Student Courses</h3>
+        <ul id="studentCourseList"></ul>
+
+        <h3>Teams</h3>
+        <ul id="teamList"></ul>
+    </div>
+
+    <hr>
+
+    <!-- Course Section -->
+    <h2>Course API</h2>
+    <button onclick="getCourses()">Get All Courses</button>
+    <form id="courseForm">
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" placeholder="Enter course name">
+        <button type="button" onclick="createCourse()">Create Course</button>
+    </form>
+
+    <hr>
+
+    <!-- Student Section -->
+    <h2>Student API</h2>
+    <button onclick="getStudents()">Get All Students</button>
+    <form id="studentForm">
+        <label for="studentFirstName">First Name:</label>
+        <input type="text" id="studentFirstName" placeholder="Enter first name">
+        
+        <label for="studentLastName">Last Name:</label>
+        <input type="text" id="studentLastName" placeholder="Enter last name">
+        
+        <label for="studentTeamId">Team ID:</label>
+        <input type="number" id="studentTeamId" placeholder="Enter team ID">
+        
+        <button type="button" onclick="createStudent()">Create Student</button>
+    </form>
+
+    <hr>
+
+    <!-- StudentCourse Section -->
+    <h2>StudentCourse API</h2>
+    <button onclick="getStudentCourses()">Get All StudentCourses</button>
+    <form id="studentCourseForm">
+        <label for="studentId">Student ID:</label>
+        <input type="number" id="studentId" placeholder="Enter student ID">
+        
+        <label for="courseId">Course ID:</label>
+        <input type="number" id="courseId" placeholder="Enter course ID">
+        
+        <button type="button" onclick="createStudentCourse()">Assign Student to Course</button>
+    </form>
+
+    <hr>
+
+    <!-- Team Section -->
+    <h2>Team API</h2>
+    <button onclick="getTeams()">Get All Teams</button>
+    <form id="teamForm">
+        <label for="teamName">Team Name:</label>
+        <input type="text" id="teamName" placeholder="Enter team name">
+        <button type="button" onclick="createTeam()">Create Team</button>
+    </form>
+
+</body>
+</html>
